@@ -1,6 +1,6 @@
 # [_Face-Recognition-App_](https://face-recognition-mn.herokuapp.com/)
 
-This Face Recognition App is a **CRUD** based **REACT APP** built using create-react-app. This is a fully functional full-stack web application deployed on Heroku. The front end is created using React.js, Node.js with Express.js for the backend as well as a PostgresSQL database to keep track of user's accounts and track their submission counts. The application uses the Clarifai API to locate a face in the picture submitted. 
+This Face Recognition App is a **CRUD** based **REACT APP** built using create-react-app. This is a fully functional full-stack web application deployed on Heroku. The front end is created using React.js, Node.js with Express.js for the backend as well as a PostgreSQL database to keep track of user's accounts and track their submission counts. The application uses the Clarifai API to locate a face in the picture submitted. 
 
 **View Repository**: [**Face-Recognition-App**](https://github.com/nguyenmarvin8/Face-Recognition-App)
 
@@ -28,14 +28,19 @@ This Face Recognition App is a **CRUD** based **REACT APP** built using create-r
 ### NPM Packages
 - Create-React-App
 - Tachyons
-- react-tilt
-- particles.js
+- React-tilt
+- Particles.js
 - Bcrypt
 - Postgresql
-- knex
-- body parser
-- cors
-- express
+- Knex
+- Body parser
+- Cors
+- Express
+
+### Back-end
+- Node.js
+- Express.js
+- PostgreSQL
 
 ### APIs
 - [Clarifai](https://www.clarifai.com/)
