@@ -9,6 +9,7 @@ import ImageLinkForm from './components/ImageLinkForm/ImageLinkForm';
 import Rank from './components/Rank/Rank';
 import './App.css';
 
+//Options for particles.js
 const particlesOptions = {
   particles: {
     "number": {
@@ -61,6 +62,7 @@ const particlesOptions = {
 }
 }
 
+//Initial state
 const initialState = {
   input: '',
   imageUrl: '',
@@ -76,16 +78,10 @@ const initialState = {
   }
 }
 
-// class App extends Component {
-//   constructor() {
-//     super();
-//     this.state = initialState;
-//   }
-
-
 class App extends Component {
   constructor() {
     super();
+    //Setup state object
     this.state = {
       input: '',
       imageUrl: '',
@@ -112,8 +108,10 @@ class App extends Component {
     }})
   }
 
+  //Calculate with response where bounding_box will be located
   calculateFaceLocation = (data) => {
     const clarifaiFace = data.outputs[0].data.regions[0].region_info.bounding_box;
+    //Grabbing image by ID
     const image = document.getElementById('inputimage');
     const width = Number(image.width);
     const height = Number(image.height);
@@ -125,16 +123,16 @@ class App extends Component {
     }
   }
 
-
-
   displayFaceBox = (box) => {
     this.setState({box: box});
   }
 
+  //Check for input in ImageLinkForm
   onInputChange = (event) => {
     this.setState({input: event.target.value});
   }
 
+  //Detect when button is clicked
   onButtonSubmit = () => {
     this.setState({imageUrl: this.state.input});
     fetch('https://stark-wildwood-95743.herokuapp.com/imageurl', {
@@ -164,39 +162,6 @@ class App extends Component {
       })
       .catch(err => console.log(err));
   }
-
-
-
-  // onButtonSubmit = () => {
-  //   this.setState({imageUrl: this.state.input});
-  //     fetch('http://localhost:3000/imageurl', {
-  //       method: 'post',
-  //       headers: {'Content-Type': 'application/json'},
-  //       body: JSON.stringify({
-  //         input: this.state.input
-  //       })
-  //     })
-  //     .then(response => response.json())
-  //     .then(response => {
-  //       if (response) {
-  //         fetch('http://localhost:3000/image', {
-  //           method: 'put',
-  //           headers: {'Content-Type': 'application/json'},
-  //           body: JSON.stringify({
-  //             id: this.state.user.id
-  //           })
-  //         })
-  //           .then(response => response.json())
-  //           .then(count => {
-  //             this.setState(Object.assign(this.state.user, { entries: count}))
-  //           })
-  //           .catch(console.log)
-
-  //       }
-  //       this.displayFaceBox(this.calculateFaceLocation(response))
-  //     })
-  //     .catch(err => console.log(err));
-  // }
 
   onRouteChange = (route) => {
     if (route === 'signout') {

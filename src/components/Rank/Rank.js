@@ -1,5 +1,6 @@
 import React from 'react';
 
+//Rank and count number of submissions
 const Rank = ({ name, entries }) => {
   return (
     <div>
