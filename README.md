@@ -1,14 +1,14 @@
-# [_Face-Recognition-App_](https://face-recognition-mn.herokuapp.com/)
+# [_Face Recognition App_](https://face-recognition-mn.herokuapp.com/)
 
-This Face Recognition App is a **CRUD** based **REACT APP** built using create-react-app. This is a fully functional full-stack web application deployed on Heroku. The front end is created using React.js, Node.js with Express.js for the backend as well as a PostgreSQL database to keep track of user's accounts and track their submission counts. The application uses the Clarifai API to locate a face in the picture submitted. 
+This Face Recognition App allows users to submit a photo and when a face is detected, a box is created over the face. It also allows users to create an account that tracks their submission count. It is a fully functional full-stack **CRUD** based **React** web application deployed on Heroku. This project was created using React.js, Node.js, Express.js and PostgreSQL database to keep track of user's accounts and track their submissions. It also uses Clarifai's API to locate a face in the photo submitted.
 
-![Face-Recognition-App](https://imgur.com/GE4kbjY.jpg)
+![Face Recognition App](https://imgur.com/GE4kbjY.jpg)
 
-**View Repository**: [**Face-Recognition-App**](https://github.com/nguyenmarvin8/Face-Recognition-App)
+**View Front-End Repository**: [**Face Recognition App Front-End**](https://github.com/nguyenmarvin8/Face-Recognition-App)
 
-**View Back-End Repository**: [**Face-Recognition-App-API**](https://github.com/nguyenmarvin8/Face-Recognition-App-API)
+**View Back-End Repository**: [**Face Recognition App API Back-End**](https://github.com/nguyenmarvin8/Face-Recognition-App-API)
 
-**View App**: [**Face-Recognition-mn.herokuapp.com/**](https://face-recognition-mn.herokuapp.com/)
+**View App**: [**Face Recognition App**](https://face-recognition-mn.herokuapp.com/)
 
 ## Functionality and Features
 
